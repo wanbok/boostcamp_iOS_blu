@@ -6,7 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,26 +28,26 @@
                                 <rect key="frame" x="20" y="313" width="374" height="110"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QdV-iq-UOe">
-                                        <rect key="frame" x="60" y="0.0" width="254" height="30"/>
+                                        <rect key="frame" x="37.333333333333343" y="0.0" width="299.33333333333337" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pn9-c0-OCR">
-                                        <rect key="frame" x="60" y="40" width="254" height="30"/>
+                                        <rect key="frame" x="37.333333333333343" y="40" width="299.33333333333337" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="hkB-RI-9Wb">
-                                        <rect key="frame" x="100" y="80" width="174" height="30"/>
+                                        <rect key="frame" x="74.666666666666686" y="80" width="224.66666666666663" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLN-Se-R6r">
-                                                <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="46.999999999999986" height="30"/>
                                                 <state key="normal" title="Sign In"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWN-ZO-dgv">
-                                                <rect key="frame" x="119" y="0.0" width="55" height="30"/>
+                                                <rect key="frame" x="169.66666666666663" y="0.0" width="55" height="30"/>
                                                 <state key="normal" title="Sign Up">
                                                     <color key="titleColor" red="0.94901960780000005" green="0.054901960780000002" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -54,21 +56,27 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="hkB-RI-9Wb" secondAttribute="trailing" constant="100" id="2lN-ll-JXL"/>
-                                    <constraint firstItem="QdV-iq-UOe" firstAttribute="leading" secondItem="gIz-48-hBl" secondAttribute="leading" constant="60" id="3lj-JX-M9Q"/>
-                                    <constraint firstAttribute="trailing" secondItem="Pn9-c0-OCR" secondAttribute="trailing" constant="60" id="AJH-Dj-cM1"/>
-                                    <constraint firstAttribute="trailing" secondItem="QdV-iq-UOe" secondAttribute="trailing" constant="60" id="Vkc-gL-CPF"/>
-                                    <constraint firstItem="Pn9-c0-OCR" firstAttribute="leading" secondItem="gIz-48-hBl" secondAttribute="leading" constant="60" id="iSQ-AL-gY4"/>
-                                    <constraint firstItem="hkB-RI-9Wb" firstAttribute="leading" secondItem="gIz-48-hBl" secondAttribute="leading" constant="100" id="xdb-0S-KjI"/>
+                                    <constraint firstItem="hkB-RI-9Wb" firstAttribute="width" secondItem="gIz-48-hBl" secondAttribute="width" multiplier="0.6" id="5P1-oo-Ynm"/>
+                                    <constraint firstItem="Pn9-c0-OCR" firstAttribute="width" secondItem="gIz-48-hBl" secondAttribute="width" multiplier="0.8" id="lRQ-Wa-W8Z"/>
+                                    <constraint firstItem="QdV-iq-UOe" firstAttribute="width" secondItem="gIz-48-hBl" secondAttribute="width" multiplier="0.8" id="rXx-Wf-FkD"/>
                                 </constraints>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="SKD-da-Fph">
+                                <rect key="frame" x="69.333333333333343" y="99" width="275.66666666666663" height="184"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SKD-da-Fph" secondAttribute="height" multiplier="3:2" id="NjC-zd-n1i"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="QdV-iq-UOe" firstAttribute="top" secondItem="SKD-da-Fph" secondAttribute="bottom" constant="30" id="7Gv-5p-kfs"/>
                             <constraint firstItem="gIz-48-hBl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="El8-oX-Wlf"/>
+                            <constraint firstItem="SKD-da-Fph" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JQh-bK-7eG"/>
                             <constraint firstItem="gIz-48-hBl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YtL-tu-uKR"/>
                             <constraint firstItem="gIz-48-hBl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iKH-ha-nKO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gIz-48-hBl" secondAttribute="trailing" id="j7s-tH-UTw"/>
+                            <constraint firstItem="SKD-da-Fph" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="rbn-7O-v3s"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -77,4 +85,7 @@
             <point key="canvasLocation" x="115.94202898550725" y="123.09782608695653"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dog" width="240" height="160"/>
+    </resources>
 </document>
