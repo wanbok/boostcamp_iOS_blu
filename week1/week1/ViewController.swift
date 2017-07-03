@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func signIn(_ sender: Any) {
+    @IBAction func signIn(_ sender: UIButton) {
         guard let idText = idTextField.text,
             !idText.isEmpty else {
             return
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         }
         print("ID : \(idText), PW : \(pwText)")
     }
-    @IBAction func signUp(_ sender: Any) {
+    @IBAction func signUp(_ sender: UIButton) {
         print("touch up inside - sign up")
     }
 }
