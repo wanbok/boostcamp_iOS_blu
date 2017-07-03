@@ -28,13 +28,13 @@
                                 <rect key="frame" x="20" y="313" width="374" height="110"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QdV-iq-UOe">
-                                        <rect key="frame" x="37.333333333333343" y="0.0" width="299.33333333333337" height="30"/>
+                                        <rect key="frame" x="37" y="0.0" width="300" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pn9-c0-OCR">
-                                        <rect key="frame" x="37.333333333333343" y="40" width="299.33333333333337" height="30"/>
+                                        <rect key="frame" x="37" y="40" width="300" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -62,7 +62,7 @@
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="SKD-da-Fph">
-                                <rect key="frame" x="69.333333333333343" y="99" width="275.66666666666663" height="184"/>
+                                <rect key="frame" x="68.666666666666686" y="76.666666666666657" width="276.66666666666663" height="184.33333333333334"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SKD-da-Fph" secondAttribute="height" multiplier="3:2" id="NjC-zd-n1i"/>
                                 </constraints>
@@ -70,9 +70,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="QdV-iq-UOe" firstAttribute="top" secondItem="SKD-da-Fph" secondAttribute="bottom" constant="30" id="7Gv-5p-kfs"/>
                             <constraint firstItem="gIz-48-hBl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="El8-oX-Wlf"/>
                             <constraint firstItem="SKD-da-Fph" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JQh-bK-7eG"/>
+                            <constraint firstItem="gIz-48-hBl" firstAttribute="top" secondItem="SKD-da-Fph" secondAttribute="bottom" multiplier="1.2" id="JT4-B2-y2n"/>
                             <constraint firstItem="gIz-48-hBl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YtL-tu-uKR"/>
                             <constraint firstItem="gIz-48-hBl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iKH-ha-nKO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gIz-48-hBl" secondAttribute="trailing" id="j7s-tH-UTw"/>
