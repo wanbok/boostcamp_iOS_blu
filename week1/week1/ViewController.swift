@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var pwTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -18,5 +21,18 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    @IBAction func signIn(_ sender: Any) {
+        guard let idText = idTextField.text,
+            !idText.isEmpty else {
+            return
+        }
+        guard let pwText = pwTextField.text,
+            !pwText.isEmpty else {
+            return
+        }
+        print("ID : \(idText), PW : \(pwText)")
+    }
+    @IBAction func signUp(_ sender: Any) {
+        print("touch up inside - sign up")
+    }
 }

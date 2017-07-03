@@ -37,7 +37,7 @@
                                         <rect key="frame" x="37" y="40" width="300" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="hkB-RI-9Wb">
                                         <rect key="frame" x="74.666666666666686" y="80" width="224.66666666666663" height="30"/>
@@ -45,12 +45,18 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLN-Se-R6r">
                                                 <rect key="frame" x="0.0" y="0.0" width="46.999999999999986" height="30"/>
                                                 <state key="normal" title="Sign In"/>
+                                                <connections>
+                                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ufh-BB-f2s"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWN-ZO-dgv">
                                                 <rect key="frame" x="169.66666666666663" y="0.0" width="55" height="30"/>
                                                 <state key="normal" title="Sign Up">
                                                     <color key="titleColor" red="0.94901960780000005" green="0.054901960780000002" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zeI-hJ-R5P"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -79,6 +85,10 @@
                             <constraint firstItem="SKD-da-Fph" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="rbn-7O-v3s"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="idTextField" destination="QdV-iq-UOe" id="UXp-R1-FYW"/>
+                        <outlet property="pwTextField" destination="Pn9-c0-OCR" id="aqA-19-Qzg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
