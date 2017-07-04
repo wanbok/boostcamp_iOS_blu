@@ -15,19 +15,32 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let gesture = UITapGestureRecognizer(
+            target: self,
+            action: #selector(viewDidTap))
+        self.view.addGestureRecognizer(gesture)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: Actions
+    
+    func viewDidTap() {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func signinButtonDidPress(_ sender: UIButton) {
         guard let idText = idTextField.text,
-            !idText.isEmpty else {
+            !idText.isEmpty
+        else {
             return
         }
         guard let pwText = pwTextField.text,
-            !pwText.isEmpty else {
+            !pwText.isEmpty
+        else {
             return
         }
         print("ID : \(idText), PW : \(pwText)")
@@ -35,4 +48,6 @@ class ViewController: UIViewController {
     @IBAction func signupButtonDidPress(_ sender: UIButton) {
         print("touch up inside - sign up")
     }
+    
+    
 }
