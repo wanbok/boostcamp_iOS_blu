@@ -8,9 +8,8 @@
 
 import UIKit
 
-import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     // MARK: Properties
     @IBOutlet weak var idTextField: UITextField!
