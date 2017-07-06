@@ -28,13 +28,13 @@
                                 <rect key="frame" x="16" y="278.5" width="343" height="110"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ntG-8a-bc1">
-                                        <rect key="frame" x="34" y="0.0" width="275" height="30"/>
+                                        <rect key="frame" x="34.5" y="0.0" width="274" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XPq-pj-uvF">
-                                        <rect key="frame" x="34" y="40" width="275" height="30"/>
+                                        <rect key="frame" x="34.5" y="40" width="274" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -68,7 +68,7 @@
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="8Lk-IG-8c8">
-                                <rect key="frame" x="62.5" y="56" width="250" height="167"/>
+                                <rect key="frame" x="62.5" y="56" width="250" height="166.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8Lk-IG-8c8" secondAttribute="height" multiplier="3:2" id="mWv-mR-DJb"/>
                                 </constraints>
@@ -106,12 +106,83 @@
                     <view key="view" contentMode="scaleToFill" id="5ew-3W-J5B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="78C-4X-YLs">
+                                <rect key="frame" x="165.5" y="32.5" width="193.5" height="110"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="32i-Bm-UnN">
+                                        <rect key="frame" x="0.0" y="0.0" width="193.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VMa-Ex-JNU">
+                                        <rect key="frame" x="0.0" y="40" width="193.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Yt-Ej-ohK">
+                                        <rect key="frame" x="0.0" y="80" width="193.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <variation key="heightClass=compact" spacing="20"/>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eAo-Q4-dXI">
+                                <rect key="frame" x="16" y="161.5" width="343" height="459.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="See-2R-pyh">
+                                <rect key="frame" x="37.5" y="629" width="300" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbk-Hc-eFG">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="0.94901960780000005" green="0.054901960780000002" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ei-Qc-2S5">
+                                        <rect key="frame" x="200" y="0.0" width="100" height="30"/>
+                                        <state key="normal" title="Sign Up"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="cJD-Jc-vLL">
+                                <rect key="frame" x="16" y="20" width="133.5" height="133.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cJD-Jc-vLL" secondAttribute="height" multiplier="1:1" id="wIh-ou-AqZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="See-2R-pyh" firstAttribute="width" secondItem="5ew-3W-J5B" secondAttribute="width" multiplier="0.8" id="3xt-k0-F9S"/>
+                            <constraint firstItem="See-2R-pyh" firstAttribute="centerX" secondItem="5ew-3W-J5B" secondAttribute="centerX" id="9G2-m0-P0o"/>
+                            <constraint firstItem="78C-4X-YLs" firstAttribute="leading" secondItem="cJD-Jc-vLL" secondAttribute="trailing" constant="16" id="A7z-KM-mVU"/>
+                            <constraint firstItem="cJD-Jc-vLL" firstAttribute="top" secondItem="RD4-KN-xFm" secondAttribute="bottom" id="DVq-SP-I8p"/>
+                            <constraint firstItem="eAo-Q4-dXI" firstAttribute="leading" secondItem="5ew-3W-J5B" secondAttribute="leadingMargin" id="Ugp-zb-DEh"/>
+                            <constraint firstItem="cJD-Jc-vLL" firstAttribute="height" secondItem="5ew-3W-J5B" secondAttribute="height" multiplier="0.2" id="bbR-1g-HCf">
+                                <variation key="heightClass=compact" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="78C-4X-YLs" firstAttribute="centerY" secondItem="cJD-Jc-vLL" secondAttribute="centerY" id="eSh-Fu-sLB"/>
+                            <constraint firstItem="eAo-Q4-dXI" firstAttribute="top" secondItem="cJD-Jc-vLL" secondAttribute="bottom" constant="8" id="fvH-78-ybC"/>
+                            <constraint firstItem="See-2R-pyh" firstAttribute="top" secondItem="eAo-Q4-dXI" secondAttribute="bottom" constant="8" id="hby-zf-Iga"/>
+                            <constraint firstItem="cJD-Jc-vLL" firstAttribute="leading" secondItem="5ew-3W-J5B" secondAttribute="leadingMargin" id="hcb-uv-zMg"/>
+                            <constraint firstAttribute="trailing" secondItem="78C-4X-YLs" secondAttribute="trailing" constant="16" id="klZ-3H-auL"/>
+                            <constraint firstItem="o3E-NY-DEA" firstAttribute="top" secondItem="See-2R-pyh" secondAttribute="bottom" constant="8" id="oV0-C9-Nhr"/>
+                            <constraint firstItem="eAo-Q4-dXI" firstAttribute="trailing" secondItem="5ew-3W-J5B" secondAttribute="trailingMargin" id="wu1-5O-2eQ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0B3-1n-pGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930" y="123"/>
+            <point key="canvasLocation" x="928.79999999999995" y="122.78860569715144"/>
         </scene>
     </scenes>
     <resources>
