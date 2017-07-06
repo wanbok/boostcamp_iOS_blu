@@ -68,21 +68,21 @@
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="SKD-da-Fph">
-                                <rect key="frame" x="69" y="77.333333333333314" width="276" height="184"/>
+                                <rect key="frame" x="69" y="64.666666666666686" width="276" height="184"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="SKD-da-Fph" secondAttribute="height" multiplier="3:2" id="NjC-zd-n1i"/>
+                                    <constraint firstAttribute="width" secondItem="SKD-da-Fph" secondAttribute="height" multiplier="3:2" id="nob-pn-eJt"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="SKD-da-Fph" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:4" id="AmX-n1-ckA"/>
                             <constraint firstItem="gIz-48-hBl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="El8-oX-Wlf"/>
                             <constraint firstItem="SKD-da-Fph" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JQh-bK-7eG"/>
-                            <constraint firstItem="gIz-48-hBl" firstAttribute="top" secondItem="SKD-da-Fph" secondAttribute="bottom" multiplier="1.2" id="JT4-B2-y2n"/>
+                            <constraint firstItem="gIz-48-hBl" firstAttribute="top" secondItem="SKD-da-Fph" secondAttribute="centerY" multiplier="2:1" id="JT4-B2-y2n"/>
                             <constraint firstItem="gIz-48-hBl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YtL-tu-uKR"/>
                             <constraint firstItem="gIz-48-hBl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iKH-ha-nKO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gIz-48-hBl" secondAttribute="trailing" id="j7s-tH-UTw"/>
-                            <constraint firstItem="SKD-da-Fph" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="rbn-7O-v3s"/>
                         </constraints>
                     </view>
                     <connections>
