@@ -12,8 +12,8 @@ import UIKit
 class LoginViewController: UIViewController {
     
     // MARK: Properties
-    @IBOutlet weak var idTextField: UITextField!
-    @IBOutlet weak var pwTextField: UITextField!
+    @IBOutlet private weak var idTextField: UITextField!
+    @IBOutlet private weak var pwTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,21 +34,24 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    @IBAction func signinButtonDidPress(_ sender: UIButton) {
+    @IBAction private func signinButtonDidPress(_ sender: UIButton) {
         guard let idText = idTextField.text,
             !idText.isEmpty
             else {
                 return
-        }
+            }
         guard let pwText = pwTextField.text,
             !pwText.isEmpty
             else {
                 return
-        }
+            }
         print("ID : \(idText), PW : \(pwText)")
     }
-    @IBAction func signupButtonDidPress(_ sender: UIButton) {
-        print("touch up inside - sign up")
+    @IBAction private func signupButtonDidPress(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "signup", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //let sender = segue.destination as! SignupViewController
     }
     
     
