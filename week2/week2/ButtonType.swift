@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+enum ButtonType: String {
+    case signup = "Sign Up"
+}

@@ -93,7 +93,7 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction private func unwindToLogin(_ sender: UIButton) {
-        if sender.titleLabel?.text == "Sign Up" {
+        if sender.titleLabel?.text == ButtonType.signup.rawValue {
             
             if (idTextField.text?.isEmpty ?? true) {
                 idTextField.layer.borderColor = UIColor.red.cgColor
