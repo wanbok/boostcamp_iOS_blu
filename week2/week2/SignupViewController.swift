@@ -19,6 +19,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var passwdTextField: UITextField!
     {
         didSet {
+            passwdTextField.isSecureTextEntry = true
             passwdTextField.layer.borderWidth = 0.5
             passwdTextField.layer.borderColor = UIColor.clear.cgColor
         }
@@ -26,6 +27,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var double_passwdTextField: UITextField!
     {
         didSet {
+            double_passwdTextField.isSecureTextEntry = true
             double_passwdTextField.layer.borderWidth = 0.5
             double_passwdTextField.layer.borderColor = UIColor.clear.cgColor
         }

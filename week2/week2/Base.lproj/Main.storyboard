@@ -193,7 +193,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="double_passwdTextField" destination="VMa-Ex-JNU" id="9qA-1G-Sqs"/>
+                        <outlet property="double_passwdTextField" destination="7Yt-Ej-ohK" id="OlD-mz-5rl"/>
                         <outlet property="idTextField" destination="32i-Bm-UnN" id="ybV-gg-Ohi"/>
                         <outlet property="passwdTextField" destination="VMa-Ex-JNU" id="8g7-SC-Nge"/>
                         <outlet property="placeholderLabel" destination="huS-mr-ynh" id="qSF-gg-skd"/>
