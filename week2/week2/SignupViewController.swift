@@ -51,7 +51,6 @@ class SignupViewController: UIViewController {
         }
     }
     @IBOutlet internal weak var placeholderLabel: UILabel!
-        
     
     override func viewDidLoad() {
         super.viewDidLoad()
