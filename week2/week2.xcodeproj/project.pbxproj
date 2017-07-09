@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		301D1D251F0EA2CB008A3818 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301D1D241F0EA2CB008A3818 /* SignupViewController.swift */; };
+		301D1D2D1F0FBA78008A3818 /* ButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301D1D2C1F0FBA78008A3818 /* ButtonType.swift */; };
 		30E08DB31F0DF0DB007B559F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E08DB21F0DF0DB007B559F /* AppDelegate.swift */; };
 		30E08DB51F0DF0DB007B559F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E08DB41F0DF0DB007B559F /* LoginViewController.swift */; };
 		30E08DB81F0DF0DC007B559F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E08DB61F0DF0DC007B559F /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		301D1D241F0EA2CB008A3818 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		301D1D2C1F0FBA78008A3818 /* ButtonType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonType.swift; sourceTree = "<group>"; };
 		30E08DAF1F0DF0DB007B559F /* week2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E08DB21F0DF0DB007B559F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30E08DB41F0DF0DB007B559F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		301D1D271F0F7E9F008A3818 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				30E08DB41F0DF0DB007B559F /* LoginViewController.swift */,
+				301D1D241F0EA2CB008A3818 /* SignupViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		301D1D281F0F7EC1008A3818 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				30E08DB61F0DF0DC007B559F /* Main.storyboard */,
+				30E08DB91F0DF0DC007B559F /* Assets.xcassets */,
+				30E08DBB1F0DF0DC007B559F /* LaunchScreen.storyboard */,
+				30E08DBE1F0DF0DC007B559F /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		301D1D2B1F0FBA6A008A3818 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				301D1D2C1F0FBA78008A3818 /* ButtonType.swift */,
+			);
+			name = Types;
+			sourceTree = "<group>";
+		};
 		30E08DA61F0DF0DB007B559F = {
 			isa = PBXGroup;
 			children = (
@@ -57,12 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				30E08DB21F0DF0DB007B559F /* AppDelegate.swift */,
-				30E08DB41F0DF0DB007B559F /* LoginViewController.swift */,
-				301D1D241F0EA2CB008A3818 /* SignupViewController.swift */,
-				30E08DB61F0DF0DC007B559F /* Main.storyboard */,
-				30E08DB91F0DF0DC007B559F /* Assets.xcassets */,
-				30E08DBB1F0DF0DC007B559F /* LaunchScreen.storyboard */,
-				30E08DBE1F0DF0DC007B559F /* Info.plist */,
+				301D1D271F0F7E9F008A3818 /* Controllers */,
+				301D1D281F0F7EC1008A3818 /* Resources */,
+				301D1D2B1F0FBA6A008A3818 /* Types */,
 			);
 			path = week2;
 			sourceTree = "<group>";
@@ -140,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				301D1D251F0EA2CB008A3818 /* SignupViewController.swift in Sources */,
+				301D1D2D1F0FBA78008A3818 /* ButtonType.swift in Sources */,
 				30E08DB51F0DF0DB007B559F /* LoginViewController.swift in Sources */,
 				30E08DB31F0DF0DB007B559F /* AppDelegate.swift in Sources */,
 			);

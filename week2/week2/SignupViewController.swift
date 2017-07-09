@@ -10,10 +10,29 @@ import UIKit
 
 class SignupViewController: UIViewController {
     @IBOutlet weak var idTextField: UITextField!
+    {
+        didSet {
+            idTextField.layer.borderWidth = 0.5
+            idTextField.layer.borderColor = UIColor.clear.cgColor
+        }
+    }
     @IBOutlet weak var passwdTextField: UITextField!
-    @IBOutlet weak var doublepasswdTextField: UITextField!
+    {
+        didSet {
+            passwdTextField.layer.borderWidth = 0.5
+            passwdTextField.layer.borderColor = UIColor.clear.cgColor
+        }
+    }
+    @IBOutlet weak var double_passwdTextField: UITextField!
+    {
+        didSet {
+            double_passwdTextField.layer.borderWidth = 0.5
+            double_passwdTextField.layer.borderColor = UIColor.clear.cgColor
+        }
+    }
     
-    @IBOutlet private weak var profileImageView: UIImageView! {
+    @IBOutlet internal var profileImageView: UIImageView!
+    {
         didSet {
             profileImageView.isUserInteractionEnabled = true
             if (profileImageView.image == nil) {
@@ -22,44 +41,72 @@ class SignupViewController: UIViewController {
         }
     }
     
-    @IBOutlet private weak var textView: UITextView! {
+    @IBOutlet internal weak var textView: UITextView! {
         didSet {
+            textView.delegate = self
             textView.text = ""
             textView.backgroundColor = UIColor.cyan
         }
     }
-
+    @IBOutlet internal weak var placeholderLabel: UILabel!
+        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.placeholderLabel.isHidden = !textView.text.isEmpty
+        
         let gesture = UITapGestureRecognizer(
             target: self,
-            action: #selector(profileImageViewDidTap)
+            action: #selector(updateProfile)
         )
         self.view.addGestureRecognizer(gesture)
+        
+        idTextField.addTarget(
+            self,
+            action: #selector(textFieldDidChange(textField:)
+            ),
+            for: .editingChanged
+        )
+        passwdTextField.addTarget(
+            self,
+            action: #selector(textFieldDidChange(textField:)
+            ),
+            for: .editingChanged
+        )
+        double_passwdTextField.addTarget(
+            self,
+            action: #selector(textFieldDidChange(textField:)
+            ),
+            for: .editingChanged
+        )
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func profileImageViewDidTap() {
-        
+    func textFieldDidChange(textField: UITextField) {
+        if (textField.text?.isEmpty ?? true) {
+            textField.layer.borderColor = UIColor.red.cgColor
+        } else {
+            textField.layer.borderColor = UIColor.clear.cgColor
+        }
     }
     
     @IBAction private func unwindToLogin(_ sender: UIButton) {
         if sender.titleLabel?.text == "Sign Up" {
+            
             if (idTextField.text?.isEmpty ?? true) {
+                idTextField.layer.borderColor = UIColor.red.cgColor
                 return
             }
             
             guard let password = passwdTextField.text
                 else {
+                    passwdTextField.layer.borderColor = UIColor.red.cgColor
                     return
                 }
-            guard let double_password = doublepasswdTextField.text
+            guard let double_password = double_passwdTextField.text
                 else {
+                    double_passwdTextField.layer.borderColor = UIColor.red.cgColor
                     return
                 }
             if !(password == double_password) {
@@ -74,14 +121,37 @@ class SignupViewController: UIViewController {
         )
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+}
+extension SignupViewController : UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        placeholderLabel.isHidden = !textView.text.isEmpty
     }
-    */
+}
 
+extension SignupViewController : UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    func updateProfile() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        present(
+            imagePicker,
+            animated: true,
+            completion: nil
+        )
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] {
+            profileImageView.image = image as? UIImage
+            profileImageView.backgroundColor = UIColor.clear
+        }
+        
+        
+        picker.dismiss(
+            animated: true,
+            completion: nil
+        )
+    }
 }
