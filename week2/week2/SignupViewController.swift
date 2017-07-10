@@ -33,7 +33,7 @@ class SignupViewController: UIViewController {
         }
     }
     
-    @IBOutlet internal var profileImageView: UIImageView!
+    @IBOutlet var profileImageView: UIImageView!
     {
         didSet {
             profileImageView.isUserInteractionEnabled = true
@@ -43,14 +43,14 @@ class SignupViewController: UIViewController {
         }
     }
     
-    @IBOutlet internal weak var textView: UITextView! {
+    @IBOutlet weak var textView: UITextView! {
         didSet {
             textView.delegate = self
             textView.text = ""
             textView.backgroundColor = UIColor.cyan
         }
     }
-    @IBOutlet internal weak var placeholderLabel: UILabel!
+    @IBOutlet weak var placeholderLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
