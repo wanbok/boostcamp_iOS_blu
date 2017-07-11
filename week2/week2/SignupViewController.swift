@@ -57,11 +57,19 @@ class SignupViewController: UIViewController {
         
         self.placeholderLabel.isHidden = !textView.text.isEmpty
         
-        let gesture = UITapGestureRecognizer(
+        let profileTapGesture = UITapGestureRecognizer(
             target: self,
             action: #selector(updateProfile)
         )
-        self.view.addGestureRecognizer(gesture)
+        self.profileImageView.addGestureRecognizer(profileTapGesture)
+        
+        let viewTapGesture = UITapGestureRecognizer(
+            target: self,
+            action: #selector(viewDidTap)
+        )
+        
+        self.view.addGestureRecognizer(viewTapGesture)
+        
         
         idTextField.addTarget(
             self,
@@ -82,6 +90,12 @@ class SignupViewController: UIViewController {
             for: .editingChanged
         )
         // Do any additional setup after loading the view.
+    }
+    
+    // MARK: Actions
+    
+    func viewDidTap() {
+        self.view.endEditing(true)
     }
 
     func textFieldDidChange(textField: UITextField) {
