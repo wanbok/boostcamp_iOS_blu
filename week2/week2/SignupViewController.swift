@@ -100,12 +100,14 @@ class SignupViewController: UIViewController {
                 return
             }
             
-            guard let password = passwdTextField.text
+            guard let password = passwdTextField.text,
+                passwdTextField.text?.isEmpty == false
                 else {
                     passwdTextField.layer.borderColor = UIColor.red.cgColor
                     return
                 }
-            guard let double_password = double_passwdTextField.text
+            guard let double_password = double_passwdTextField.text,
+            double_passwdTextField.text?.isEmpty == false
                 else {
                     double_passwdTextField.layer.borderColor = UIColor.red.cgColor
                     return
