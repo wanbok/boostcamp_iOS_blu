@@ -113,6 +113,7 @@ class SignupViewController: UIViewController {
                     return
                 }
             if !(password == double_password) {
+                print("check password")
                 return
             }
             
