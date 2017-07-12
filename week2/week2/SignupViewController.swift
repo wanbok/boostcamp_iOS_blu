@@ -105,38 +105,40 @@ class SignupViewController: UIViewController {
             textField.layer.borderColor = UIColor.clear.cgColor
         }
     }
-    
     @IBAction private func unwindToLogin(_ sender: UIButton) {
-        if sender.titleLabel?.text == ButtonType.signup.rawValue {
-            
-            if (idTextField.text?.isEmpty ?? true) {
-                idTextField.layer.borderColor = UIColor.red.cgColor
-                return
-            }
-            
-            guard let password = passwdTextField.text,
-                passwdTextField.text?.isEmpty == false
-                else {
-                    passwdTextField.layer.borderColor = UIColor.red.cgColor
-                    return
-                }
-            guard let double_password = double_passwdTextField.text,
-            double_passwdTextField.text?.isEmpty == false
-                else {
-                    double_passwdTextField.layer.borderColor = UIColor.red.cgColor
-                    return
-                }
-            if !(password == double_password) {
-                print("check password")
-                return
-            }
-            
+      guard sender.titleLabel?.text == ButtonType.signup.rawValue
+        else {
+          dismiss(animated: true, completion: nil)
+          return
         }
-        
-        dismiss(
-            animated: true,
-            completion: nil
-        )
+      
+      guard !(idTextField.text?.isEmpty ?? true)
+        else {
+          idTextField.layer.borderColor = UIColor.red.cgColor
+          return
+        }
+      
+      guard let password = passwdTextField.text,
+        passwdTextField.text?.isEmpty == false
+        else {
+          passwdTextField.layer.borderColor = UIColor.red.cgColor
+          return
+      }
+      guard let double_password = double_passwdTextField.text,
+        double_passwdTextField.text?.isEmpty == false
+        else {
+          double_passwdTextField.layer.borderColor = UIColor.red.cgColor
+          return
+      }
+      guard (password == double_password) else {
+        print("check password")
+        return
+      }
+      
+      dismiss(
+          animated: true,
+          completion: nil
+      )
     }
 
 }
